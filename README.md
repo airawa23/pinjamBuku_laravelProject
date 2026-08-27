@@ -46,7 +46,7 @@ Aplikasi ini dibangun menggunakan **Laravel 12** dengan tampilan modern dan resp
 |---|---|
 | **Laravel 12** | Backend web framework |
 | **PHP 8.2+** | Programming language |
-| **SQLite** | Database |
+| **MySQL** | Database |
 | **Blade** | Template engine |
 | **Tailwind CSS** | UI styling |
 | **JavaScript** | Client-side interaction |
