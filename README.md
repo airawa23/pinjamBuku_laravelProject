@@ -1,59 +1,304 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📚 PinjamBuku
+
+**PinjamBuku** adalah aplikasi web perpustakaan sederhana yang memungkinkan pengguna untuk menjelajahi katalog buku, mencari buku berdasarkan judul atau penulis, melihat detail buku, serta menambahkan buku ke keranjang peminjaman.
+
+Aplikasi ini dibangun menggunakan **Laravel 12** dengan tampilan modern dan responsif menggunakan **Tailwind CSS**.
+
+## 🖥️ Preview
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img width="1892" height="784" alt="PinjamBuku Preview" src="https://github.com/user-attachments/assets/0e5548ae-f4f4-4c4f-9cd0-28fcb473f52a" />
 </p>
 
-## About Laravel
+## ✨ Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 🔐 Authentication
+- User registration
+- User login & logout
+- Authentication middleware
+- Form validation
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 📖 Book Catalog
+- Menampilkan daftar buku
+- Menampilkan buku yang sedang trending
+- Pencarian berdasarkan judul atau penulis
+- Filter buku berdasarkan kategori
+- Informasi harga dan rating buku
+- Status ketersediaan buku
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 📚 Book Management
+- Menambahkan buku baru
+- Melihat detail buku
+- Mengedit informasi buku
+- Menghapus buku
+- Upload cover buku
+- Validasi data dan file upload
 
-## Learning Laravel
+### 🛒 Borrowing Cart
+- Menambahkan buku ke keranjang
+- Menambah jumlah buku
+- Menghapus buku dari keranjang
+- Menghitung total harga peminjaman
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🛠️ Tech Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Technology | Description |
+|---|---|
+| **Laravel 12** | Backend web framework |
+| **PHP 8.2+** | Programming language |
+| **SQLite** | Database |
+| **Blade** | Template engine |
+| **Tailwind CSS** | UI styling |
+| **JavaScript** | Client-side interaction |
+| **Font Awesome** | Icons |
 
-## Laravel Sponsors
+## 📂 Project Structure
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```text
+pinjamBuku/
+├── app/
+│   ├── Http/
+│   │   └── Controllers/
+│   │       ├── BookController.php
+│   │       ├── LoginController.php
+│   │       └── Controller.php
+│   └── Models/
+│       ├── Book.php
+│       └── User.php
+│
+├── database/
+│   ├── migrations/
+│   ├── seeders/
+│   └── database.sqlite
+│
+├── public/
+│   ├── images/
+│   └── uploads/
+│       └── books/
+│
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+│       ├── home.blade.php
+│       ├── detail.blade.php
+│       ├── cart.blade.php
+│       ├── create.blade.php
+│       ├── edit.blade.php
+│       ├── login.blade.php
+│       └── register.blade.php
+│
+└── routes/
+    └── web.php
+```
 
-### Premium Partners
+## 🚀 Installation
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 1. Clone Repository
 
-## Contributing
+```bash
+git clone https://github.com/USERNAME/pinjamBuku.git
+cd pinjamBuku
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2. Install Dependencies
 
-## Code of Conduct
+Install PHP dependencies:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+composer install
+```
 
-## Security Vulnerabilities
+Install frontend dependencies:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+npm install
+```
 
-## License
+### 3. Configure Environment
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Copy `.env.example` menjadi `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Generate application key:
+
+```bash
+php artisan key:generate
+```
+
+### 4. Configure Database
+
+Project ini menggunakan **SQLite**.
+
+Pastikan file database tersedia:
+
+```bash
+touch database/database.sqlite
+```
+
+Kemudian jalankan migration:
+
+```bash
+php artisan migrate
+```
+
+Jika ingin menggunakan data awal yang tersedia pada seeder:
+
+```bash
+php artisan db:seed
+```
+
+### 5. Build Frontend
+
+```bash
+npm run build
+```
+
+### 6. Run Application
+
+Jalankan Laravel development server:
+
+```bash
+php artisan serve
+```
+
+Kemudian buka:
+
+```text
+http://127.0.0.1:8000
+```
+
+## 🖼️ Screenshots
+
+### Home / Book Catalog
+
+<p align="center">
+  <img width="1527" height="762" alt="booklist" src="https://github.com/user-attachments/assets/a17bbf43-518c-4c9e-9bf5-762108d7ec17"/>
+</p>
+
+### Book Detail
+
+<p align="center">
+<img width="1527" height="770" alt="book_detail" src="https://github.com/user-attachments/assets/c8941f32-4fae-49d6-bd27-33b84653c11e" />
+</p>
+
+### Shopping Cart
+
+<p align="center">
+<img width="1535" height="653" alt="Shopping Cart" src="https://github.com/user-attachments/assets/836db13d-a764-428c-9e50-b9f357e32b26" />
+</p>
+
+
+### Login
+
+<p align="center">
+<img width="531" height="681" alt="Login" src="https://github.com/user-attachments/assets/c0b40411-883e-4b27-99b1-5bb11af792b5" />
+</p>
+
+### Register
+
+<p align="center">
+<img width="346" height="686" alt="Register" src="https://github.com/user-attachments/assets/99d98576-3e57-4b6d-8f79-4cec9a3f74fb" />
+</p>
+
+## 🔄 Application Flow
+
+```text
+Register / Login
+       ↓
+   Book Catalog
+       ↓
+Search / Filter Books
+       ↓
+   Book Detail
+       ↓
+ Add to Borrowing Cart
+       ↓
+    Cart Review
+```
+
+Untuk pengelolaan buku:
+
+```text
+Book Management
+       ↓
+ Add New Book
+       ↓
+ Edit Book
+       ↓
+ Delete Book
+       ↓
+ Update Book Catalog
+```
+
+## 🗃️ Database
+
+Aplikasi menggunakan database SQLite dengan model utama:
+
+### User
+Digunakan untuk menyimpan informasi pengguna dan autentikasi.
+
+### Book
+Menyimpan informasi buku seperti:
+
+- Title
+- Author
+- Category
+- Price
+- Description
+- Image
+- Rating
+- Status
+
+Keranjang peminjaman disimpan menggunakan **Laravel Session**.
+
+## 🔍 Search & Filter
+
+Pengguna dapat mencari buku berdasarkan:
+
+- Judul buku
+- Nama penulis
+
+Buku juga dapat difilter berdasarkan kategori seperti:
+
+- Education
+- IT & Engineering
+- Accounting & Finance
+- Self Development
+- Environment & Life
+- Non-Fiction
+- Fiction
+
+## 📸 Book Cover Upload
+
+Admin/user yang memiliki akses pengelolaan buku dapat mengunggah cover buku.
+
+File gambar divalidasi berdasarkan:
+
+- Format JPEG
+- Format PNG
+- Format JPG
+- Maksimal ukuran 2 MB
+
+Cover buku disimpan pada:
+
+```text
+public/uploads/books/
+```
+
+## 🧪 Testing
+
+Untuk menjalankan test Laravel:
+
+```bash
+php artisan test
+```
+
+## 👨‍💻 Author
+
+Developed by **Airlangga Bayu Taqwa**
+
+---
